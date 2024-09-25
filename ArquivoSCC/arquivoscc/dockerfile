@@ -1,0 +1,14 @@
+FROM python:3.7-alpine
+
+ENV FLASK_APP app.py
+ENV FLASK_RUN_HOST 0.0.0.0
+RUN mkdir /meu_website
+WORKDIR /meu_website
+
+COPY requirements.txt .
+
+RUN pip install -r requirements.txt
+
+COPY . .
+
+CMD ["gunicorn", "-c", "gunicorn_config.py", "--reload", "app:app"]

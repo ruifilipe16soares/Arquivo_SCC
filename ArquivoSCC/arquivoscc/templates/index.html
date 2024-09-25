@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Arquivo de Notícias SCC</title>
+    <link rel="stylesheet" type="text/css" href="static/styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap&family=Roboto:wght@700&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/x-icon" href="static/logotipo2.jpg">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="static/scripts.js"></script> <!-- Certifique-se de que o caminho para o script está correto -->
+</head>
+<body>
+    <header>
+        <img src="static/logotipo.png" alt="Logotipo SCC" class="logo" onclick="window.location.href='index.html'">
+        <div class="header-content">
+            <h1 class="main-title">Arquivo de Notícias SCC</h1>
+            <nav class="header-nav">
+                <a href="motivations.html" class="nav-link">MOTIVAÇÕES</a>
+                <a href="#search" class="nav-link">PESQUISA</a>
+            </nav>
+        </div>
+    </header>
+    
+    <section class="hero" id="hero-subtitle">
+        <div class="hero-content">
+            <div class="image-container">
+                <img src="static/sccant2.png" alt="Sporting Clube da Covilhã" class="hero-image">
+            </div>
+            <div class="text-content">
+                <h2 class="subtitle">Site de notícias arquivadas de Orgãos de Comunicação Social da região referentes ao Sporting Clube da Covilhã, o maior embaixador desportivo da Beira Interior.</h2>
+                <a href="#" class="right-arrow">→</a>
+            </div>
+        </div>
+    </section>
+    
+    <section id="motivos" class="hero hidden">
+        <div class="hero-content">
+            <div class="image-container">
+                <img src="static/sccant2.png" alt="Sporting Clube da Covilhã" class="hero-image">
+            </div>
+            <div class="text-content">
+                <h2 class="motivation-title"><a href="motivations.html">Motivações</a></h2>
+                <p class="search-news"><a href="#search">Pesquise notícias!</a></p>
+                <a href="#" class="left-arrow">←</a>
+            </div>
+        </div>
+    </section>
+
+    <section id="on-this-day">
+        <h2>NESTE DIA...</h2>
+        <h3>Veja o que aconteceu neste dia ou próximo deste dia há um determinado número de anos atrás.</h3>
+        <div id="news-container" class="news-columns">
+            <!-- As notícias serão carregadas aqui -->
+        </div>
+        <div id="more-news" class="hidden">
+            <a href="#" id="prev-arrow" class="left-arrow">←</a>
+            <a href="#" id="next-arrow" class="right-arrow">→</a>
+        </div>
+    </section>
+
+    <section id="search">
+        <h3>PESQUISAR NOTÍCIAS</h3>
+        <h4>Procure notícias através da introdução de um ou mais termos escritos. Se quiser filtrar a pesquisa pode escolher o Ano de publicação das notícias e o Orgão de Comunicação Social pelo qual elas foram redigidas e publicadas.</h4>
+        <form id="search-form">
+            <input type="text" id="search-query" name="query" placeholder="Texto">
+            <select id="search-year" name="year">
+                <option value="">Ano</option>
+                <script>
+                    for (var year = 2001; year <= 2024; year++) {
+                        document.write('<option value="' + year + '">' + year + '</option>');
+                    }
+                </script>
+            </select>
+            <select id="search-source" name="source">
+                <option value="">Orgão de Comunicação Social</option>
+                <option value="Rádio Cova da Beira">Rádio Cova da Beira</option>
+                <option value="Rádio Caria">Rádio Caria</option>
+                <option value="Rádio Clube da Covilhã">Rádio Clube da Covilhã</option>
+                <option value="Notícias da Covilhã">Notícias da Covilhã</option>
+            </select>
+            <button type="submit">Pesquisar</button>
+        </form>
+        <div id="results-container" class="news-columns"></div> 
+    </section>
+
+    <footer>
+        <p>A elaboração deste site foi resultado de uma proposta de Projeto final de curso do 1.º ciclo em Engenharia Informática da Universidade da Beira Interior (UBI). O projeto disponibiliza notícias arquivadas de quatro sites de notícias da região - <a href="https://noticiasdacovilha.pt/" target="_blank" style="text-decoration: underline; color: white;">Notícias da Covilhã</a>; <a href="https://rcb-radiocovadabeira.pt/" target="_blank" style="text-decoration: underline; color: white;">Rádio Cova da Beira</a>; <a href="https://radio-covilha.pt/" target="_blank" style="text-decoration: underline; color: white;">Rádio Clube da Covilhã</a>; <a href="https://radiocaria.pt/" target="_blank" style="text-decoration: underline; color: white;">Rádio Caria</a> - desde o início do século até ao ano de 2023, utilizando por base os recursos do Arquivo.pt.</p>
+        <p>Este website contribui para celebrar o centenário de um clube histórico, não só da Beira Interior, mas também do País, preservando parte da história do clube e dos Orgãos de Comunicação Social referidos, muito importantes para o dinamismo da região.</p>
+        <div class="institutions">
+            <div class="institutions-bar">
+                <a href="https://www.ubi.pt/" target="_blank">
+                    <img src="static/ubi.jpg" alt="UBI">
+                </a>
+                <a href="https://arquivo.pt/" target="_blank">
+                    <img src="static/arquivo.png" alt="Arquivo.pt">
+                </a>
+            </div>
+        </div>
+    </footer>
+    
+</body>
+</html>

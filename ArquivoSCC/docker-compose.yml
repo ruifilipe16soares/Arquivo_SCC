@@ -1,0 +1,44 @@
+version: '3'
+
+services:
+
+  elasticsearch:
+    image: elasticsearch:7.17.0
+    environment:
+      - discovery.type=single-node
+      - xpack.security.enabled=false
+    ports:
+      - "9200:9200"
+    networks:
+      - elasticsearch_es-network
+
+  # Proxies requests to internal services
+  nginx:
+    image: nginx:1.20.2
+    container_name: nginx_multiple_websites
+    restart: always
+    depends_on:
+        - arquivoscc
+    volumes:
+      - ./nginx/nginx.conf:/etc/nginx/nginx.conf
+    ports:
+      - 90:80
+    networks:
+      - elasticsearch_es-network
+
+#arquivoscc
+  arquivoscc:
+    image: arquivoscc
+    container_name: arquivoscc
+    restart: always
+    build:
+      context: ./arquivoscc
+    volumes:
+      - './arquivoscc:/arquivoscc'
+    ports:
+      - 8087:8087
+    networks:
+      - elasticsearch_es-network
+
+networks:
+  elasticsearch_es-network:

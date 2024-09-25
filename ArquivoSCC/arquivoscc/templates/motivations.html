@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Motivações</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="static/motivations.css">
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap&family=Lucida+Sans+Unicode:wght@700&display=swap" rel="stylesheet"> 
+    <link rel="icon" type="image/x-icon" href="static/logotipo2.jpg">
+    <script src="static/motivation.js"></script>
+
+</head>
+<body>
+    <header>
+        <img src="static/logotipo.png" alt="Logotipo SCC" class="logo" onclick="window.location.href='index.html'">
+        <div class="header-content">
+            <h1 class="main-title">Arquivo de Notícias SCC</h1>
+            <nav class="header-nav">
+                <a href="motivations.html" class="nav-link">MOTIVAÇÕES</a>
+                <a href="#search" class="nav-link">PESQUISA</a>
+            </nav>
+        </div>
+    </header>
+
+    <main id="motivations-content">
+        <div class="motivations-text">
+            <h2>Motivações</h2>
+            <p>
+                No âmbito da Unidade Curricular de Projeto, do 3º ano da Licenciatura em Engenharia Informática na Universidade da Beira Interior, foi desenvolvido o <b>Arquivo de Notícias SCC</b>, dando resposta à proposta de enunciado abaixo:
+            </p>
+            <iframe src="static/RC3.pdf" width="70%" height="500px" title="Proposta de Projeto UBI 2024" style="display: block; margin: 60px auto;"></iframe>
+            <p>
+                <a href="https://www.di.ubi.pt/~hugomcp/projeto/RC3.pdf" target="_blank" class="pdf-link">Caso o enunciado não carregue, clique aqui</a> 
+            </p>
+            <p>
+                O <b>Arquivo de Notícias SCC</b> tem por base a recuperação de notícias sobre o <a href="http://www.sportingdacovilha.com/" target="_blank" style="text-decoration: underline; color: black;">Sporting Clube da Covilhã</a> desde o início do século com recurso ao Arquivo.pt, um site que tem arquivadas notícias com a sua formatação de origem, de vários sites de notícias diferentes. A proposta para o nosso site foi proceder à extração de dados apenas dos sites dos principais Órgãos de Comunicação Social da região da Beira Interior, cujos selecionados foram: <a href="https://noticiasdacovilha.pt/" target="_blank" style="text-decoration: underline; color: black;">Notícias da Covilhã</a>; <a href="https://rcb-radiocovadabeira.pt/" target="_blank" style="text-decoration: underline; color: black;">Rádio Cova da Beira</a>; <a href="https://radio-covilha.pt/" target="_blank" style="text-decoration: underline; color: black;">Rádio Clube da Covilhã</a>; <a href="https://radiocaria.pt/" target="_blank" style="text-decoration: underline; color: black;">Rádio Caria</a>.
+            </p>
+            <p>
+                Após a extração de todas as notícias arquivadas destes quatro sites, foram filtradas pelo tema que nos interessa - o <b>SCC</b> - e deste modo ter as notícias devidamente formatadas para depois serem utilizadas.
+            </p>
+            <p>
+                De seguida foi desenvolvido o website para tornar os dados recolhidos acessíveis a todos os utilizadores, no formato de notícias.
+            </p>
+            <p>
+                Este projeto foi desenvolvido por <b>Rui Soares</b> e por <b><a href="https://www.di.ubi.pt/~rcampos/" target="_blank" style="text-decoration: underline; color: black;">Ricardo Campos</a></b>, aluno e Professor, respetivamente, em Engenharia Informática na Universidade da Beira Interior.
+            </p>
+            <p>
+                <b>O trabalho desenvolvido espera preservar e honrar parte dos mais de 100 anos de uma instituição histórica da Beira Interior e do País, assim como os seus associados, adeptos e simpatizantes.</b>
+            </p>
+        </div>
+    </main>
+
+    <section id="search">
+        <h3>PESQUISAR NOTÍCIAS</h3>
+        <h4>Procure notícias através da introdução de um ou mais termos escritos. Se quiser filtrar a pesquisa pode escolher o Ano de publicação das notícias e o Orgão de Comunicação Social pelo qual elas foram redigidas e publicadas.</h4>
+        <form id="search-form">
+            <input type="text" id="search-query" name="query" placeholder="Texto">
+            <select id="search-year" name="year">
+                <option value="">Ano</option>
+                <script>
+                    for (var year = 2001; year <= 2024; year++) {
+                        document.write('<option value="' + year + '">' + year + '</option>');
+                    }
+                </script>
+            </select>
+            <select id="search-source" name="source">
+                <option value="">Orgão de Comunicação Social</option>
+                <option value="Rádio Cova da Beira">Rádio Cova da Beira</option>
+                <option value="Rádio Caria">Rádio Caria</option>
+                <option value="Rádio Clube da Covilhã">Rádio Clube da Covilhã</option>
+                <option value="Notícias da Covilhã">Notícias da Covilhã</option>
+            </select>
+            <button type="submit">Pesquisar</button>
+        </form>
+        <div id="results-container" class="news-columns"></div> 
+    </section>
+
+    <footer>
+        <p>A elaboração deste site foi resultado de uma proposta de Projeto final de curso do 1.º ciclo em Engenharia Informática da Universidade da Beira Interior (UBI). O projeto disponibiliza notícias arquivadas de quatro sites de notícias da região - <a href="https://noticiasdacovilha.pt/" target="_blank" style="text-decoration: underline; color: white;">Notícias da Covilhã</a>; <a href="https://rcb-radiocovadabeira.pt/" target="_blank" style="text-decoration: underline; color: white;">Rádio Cova da Beira</a>; <a href="https://radio-covilha.pt/" target="_blank" style="text-decoration: underline; color: white;">Rádio Clube da Covilhã</a>; <a href="https://radiocaria.pt/" target="_blank" style="text-decoration: underline; color: white;">Rádio Caria</a> - desde o início do século até ao ano de 2023, utilizando por base os recursos do Arquivo.pt.</p>
+        <p>Este website contribui para celebrar o centenário de um clube histórico, não só da Beira Interior, mas também do País, preservando parte da história do clube e dos Orgãos de Comunicação Social referidos, muito importantes para o dinamismo da região.</p>
+        <div class="institutions">
+            <div class="institutions-bar">
+                <a href="https://www.ubi.pt/" target="_blank">
+                    <img src="static/ubi.jpg" alt="UBI">
+                </a>
+                <a href="https://arquivo.pt/" target="_blank">
+                    <img src="static/arquivo.png" alt="Arquivo.pt">
+                </a>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

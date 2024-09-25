@@ -19,3 +19,7 @@ The aim of this project was to contribute to the preservation of local sports
 heritage and the collective memory of a historic sports institution in the Beira
 Interior and the country, Sporting Clube da Covilhã, and also to recover and
 preserve information - and consequently, history - from some of the main media outlets in the Beira Interior region.
+
+
+This project required expertise in Python, NoSQL databases (Elasticsearch), RESTful APIs, Flask, web programming languages (HTML, CSS, JavaScript), Nginx, and Docker, allowing me to gather experience in multiple aspects related to Web scraping, Data Science, and Software Development.
+

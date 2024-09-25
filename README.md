@@ -5,8 +5,8 @@ over the past decade on the digital platforms of the main media outlets in the
 Beira Interior region - Rádio Cova da Beira, Rádio Caria, Rádio Clube da Covilhã, and Notícias da Covilhã - focusing on the main club of the city of Covilhã.
 In particular, this project aimed to make these contents available through the
 development of a dedicated website and a search system that allows users of
-the web platform to retrieve information about the club from the data collected from Arquivo.pt. After extracting the news from these four websites, we
-implemented a filter to select only the news related to Sporting Clube da Covilhã. This process resulted in the retrieval of 822 news articles: 65 from Rádio
+the web platform to retrieve information about the club from the data collected from Arquivo.pt. After extracting the news from these four websites, we
+implemented a filter to select only the news related to Sporting Clube da Covilhã. This process resulted in the retrieval of 822 news articles: 65 from Rádio
 Clube da Covilhã, 326 from Rádio Cova da Beira, 120 from Rádio Caria, and
 311 from Notícias da Covilhã. This data are subsequently loaded and indexed
 in a NoSQL database and embedded in the developed website (in highlighted

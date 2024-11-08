@@ -29,6 +29,3 @@ This project required expertise in Python, NoSQL databases (Elasticsearch), REST
 
 
 
-## Project Architecture
-
-
